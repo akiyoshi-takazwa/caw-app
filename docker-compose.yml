@@ -1,51 +1,127 @@
 version: '3'
 
 services:
-  php:
-    container_name: php
-    build: ./docker/php
-    volumes:
-      - ./myapp/:/var/www
-
   nginx:
-    image: nginx
-    container_name: nginx
-    ports:
-      - 80:80
-    volumes:
-      - ./myapp/:/var/www
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - php
-
-  db:
-    image: mysql:5.7
-    container_name: db-host
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: database
-      MYSQL_USER: docker
-      MYSQL_PASSWORD: docker
-      TZ: 'Asia/Tokyo'
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    volumes:
-      - ./docker/db/data:/var/lib/mysql
-      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./docker/db/sql:/docker-entrypoint-initdb.d
-    ports:
-      - 3306:3306
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=db-host
-      - PMA_USER=docker
-      - PMA_PASSWORD=docker
+    image: nginx:latest
     links:
-      - db
-    ports:
-      - 8080:80
+      - "app:app"
     volumes:
-      - /sessions
+      - "./docker/nginx/default.conf:/etc/nginx/default.conf"
+      - "./caw/public:/app/public"
+    ports:
+      - "80:80"
+    tty: true
+    logging:
+      driver: local
+
+  app:
+    build: ./docker/php
+    working_dir: "/app"
+    environment:
+      - DB_HOST=mysql
+      - REDIS_HOST=redis
+      - SCOUT_ELASTIC_HOST=elasticsearch:9200
+      - APP_DOMAIN=caw.test
+      - COMPOSER_MEMORY_LIMIT=-1
+      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+      - QUEUE_CONNECTION=redis
+      - MAIL_HOST=mailhog
+      - MAIL_PORT=1025
+      - MAIL_ENCRYPTION=null
+      - TELESCOPE_ENABLED=true
+      - DEBUGBAR_ENABLED=true
+      - PHP_MEMORY_LIMIT=2048M
+      - MINIO_ACCESS_KEY=root
+      - MINIO_SECRET_KEY=password
+      - AWS_UPLOAD_S3_URL=http://minio:9000
+      - AWS_UPLOAD_S3_BUCKET=uploads
+      - AWS_UPLOAD_S3_PATH_STYLE_ENDPOINT=true
+    links:
+      - "mysql:mysql"
+      - "redis:redis"
+    volumes:
+      - "./caw/:/app"
+      - "~/.gitconfig:/etc/gitconfig"
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "www.caw.test:127.0.0.1"
+      - "admin.caw.test:127.0.0.1"
+    tty: true
+    shm_size: 512M
+    logging:
+      driver: local
+
+#  後から実装する予定なので、コメントアウト
+#  worker:
+#    build: ./docker/php
+#    command: php artisan queue:work
+#    working_dir: "/app"
+#    environment:
+#      - DB_HOST=mysql
+#      - REDIS_HOST=redis
+#      - CHROMEDRIVER_HOST=chrome_driver
+#      - APP_DOMAIN=caw.test
+#      - COMPOSER_MEMORY_LIMIT=-1
+#      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+#      - SESSION_DRIVER=redis
+#      - QUEUE_CONNECTION=redis
+#      - PHP_MEMORY_LIMIT=2048M
+#    links:
+#      - "mysql:mysql"
+#      - "redis:redis"
+#    volumes:
+#      - "./caw:/app"
+#    extra_hosts:
+#      - "www.caw.test:127.0.0.1"
+#      - "admin.caw.test:127.0.0.1"
+#    tty: true
+#    logging:
+#      driver: local
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=caw
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    hostname: mysql
+    volumes:
+      - "./caw/storage/mysql:/var/lib/mysql"
+      - "./caw/config/my.cnf:/etc/mysql/conf.d/my.cnf"
+      - "./caw/database/create-test-db.sql:/docker-entrypoint-initdb.d/create-test-db.sql"
+    tty: true
+    logging:
+      driver: local
+
+  redis:
+    image: redis:5.0.4-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./caw/storage/redis:/data"
+    hostname: redis
+    tty: true
+    logging:
+      driver: local
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+
+  minio:
+    image: bitnami/minio:latest
+    ports:
+      - "${MINIO_PORT:-9000}:9000"
+    volumes:
+      - minio_store:/export
+    environment:
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-root}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-password}
+      MINIO_DEFAULT_BUCKETS: ${AWS_UPLOAD_S3_BUCKET:-uploads:public,personalized-support-files:public}
+
+volumes:
+  minio_store:

@@ -1,27 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c068a24-30a6-44a9-87ad-efdadeb78b51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-environment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caw-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/docker/db/data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/db/data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/db/data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/tests/Bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/laravel/webpack.mix.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +115,25 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1615799023" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/../caw-server" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1p43UUrevGE1k36Q9YXMhCtGZ78" />
   <component name="ProjectLevelVcsManager">
@@ -61,6 +159,8 @@
       <updated>1614428551880</updated>
       <workItem from="1614428553691" duration="2823000" />
       <workItem from="1614434966352" duration="3024000" />
+      <workItem from="1615795079224" duration="171000" />
+      <workItem from="1615797212672" duration="5404000" />
     </task>
     <servers />
   </component>
@@ -77,6 +177,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
