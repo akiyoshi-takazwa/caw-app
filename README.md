@@ -1,7 +1,4 @@
-# laravel6.0-docker-envirnment
+# CAW-APP
 
-laravelをいじり倒す
-
-基本的なものしか入れていないです。
-
-nginx & mysql & phpadmin
+猫とお仕事ができるアプリ。
+作成中
